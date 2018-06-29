@@ -14,6 +14,7 @@ import javax.swing.JTextField;
  * @author Logan Michel
  */
 public class Ex03L09 {
+
     private JFrame jFrame;
     private JLabel jLabelNumero;
     private JTextField jTextFieldNumero;
@@ -21,8 +22,8 @@ public class Ex03L09 {
     private JTextArea jTextAreaTabuada;
     private JScrollPane jScrollPaneTabuada;
     private JButton jButtonGerarTabuada;
-    
-    public Ex03L09(){
+
+    public Ex03L09() {
         gerarTela();
         instanciarComponentes();
         gerarDimensoes();
@@ -40,7 +41,7 @@ public class Ex03L09 {
         jFrame.setLocationRelativeTo(null);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    
+
     private void adicionarComponentes() {
         jFrame.add(jLabelNumero);
         jFrame.add(jTextFieldNumero);
@@ -66,7 +67,7 @@ public class Ex03L09 {
         jLabelTabuada.setSize(50, 20);
         jButtonGerarTabuada.setSize(200, 40);
         jScrollPaneTabuada.setSize(470, 385);
-        
+
     }
 
     private void gerarLocalizacoes() {
@@ -82,23 +83,32 @@ public class Ex03L09 {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(jTextFieldNumero.getText().trim().isEmpty()){
+                if (jTextFieldNumero.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Você prescisa digitar um Valor.");
                     jTextFieldNumero.requestFocus();
                     return;
                 }
                 int numero = 0;
                 try {
-                    numero = Integer.parseInt(
-                        jTextFieldNumero.getText().trim());
+                    numero = Integer.parseInt(jTextFieldNumero.getText().trim());
+                    
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "O campo deve conter somentes Números");
                     jTextFieldNumero.requestFocus();
                     return;
                 }
+
+                String resultado = "";
+                for (int i = 0; i < 21; i++) {
+                    resultado += numero + " X " + i + " = " + numero * i + "\n";
+                jTextAreaTabuada.setText(resultado);
+                
+                }
+                
+
             }
         });
-        
+
     }
 
     private void configurarJScrolPane() {
@@ -110,5 +120,4 @@ public class Ex03L09 {
         jTextAreaTabuada.setLineWrap(true);
     }
 
-    
 }
