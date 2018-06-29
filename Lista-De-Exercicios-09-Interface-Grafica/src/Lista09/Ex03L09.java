@@ -28,7 +28,7 @@ public class Ex03L09 {
         instanciarComponentes();
         gerarDimensoes();
         gerarLocalizacoes();
-        adicionarComponentes();
+        adicionarComponentes();     
         acaoGerarTabuada();
         configurarJScrolPane();
         jFrame.setVisible(true);
@@ -101,10 +101,9 @@ public class Ex03L09 {
                 String resultado = "";
                 for (int i = 0; i < 21; i++) {
                     resultado += numero + " X " + i + " = " + numero * i + "\n";
-                jTextAreaTabuada.setText(resultado);
-                
                 }
                 
+                jTextAreaTabuada.setText(resultado);
 
             }
         });
