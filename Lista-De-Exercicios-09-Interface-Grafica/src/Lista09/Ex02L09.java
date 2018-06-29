@@ -64,6 +64,26 @@ public class Ex02L09 {
         jButtonTabuada.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(jTextFieldNumero.getText().trim().isEmpty()){
+                    JOptionPane.showMessageDialog(null, "Um valor deve ser Preenchido!");
+                    jTextFieldNumero.requestFocus();
+                    return;
+                }
+                
+                int numero = 0;
+                try {
+                    numero = Integer.parseInt(
+                        jTextFieldNumero.getText().trim());
+                } catch (Exception ed) {
+                    JOptionPane.showMessageDialog(null, "O Valor deve conter somente Números!");
+                    jTextFieldNumero.requestFocus();
+                    return;
+                }
+                
+                
+                
+                
+                
                 jTextFieldNumero.getText();
                 int resultado = Integer.parseInt(jTextFieldNumero.getText());
                 JOptionPane.showMessageDialog(null, resultado + " X " + "50 = " + resultado * 50);
