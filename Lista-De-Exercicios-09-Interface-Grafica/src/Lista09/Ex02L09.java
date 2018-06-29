@@ -74,16 +74,11 @@ public class Ex02L09 {
                 try {
                     numero = Integer.parseInt(
                         jTextFieldNumero.getText().trim());
-                } catch (Exception ed) {
+                } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "O Valor deve conter somente Números!");
                     jTextFieldNumero.requestFocus();
                     return;
                 }
-                
-                
-                
-                
-                
                 jTextFieldNumero.getText();
                 int resultado = Integer.parseInt(jTextFieldNumero.getText());
                 JOptionPane.showMessageDialog(null, resultado + " X " + "50 = " + resultado * 50);
