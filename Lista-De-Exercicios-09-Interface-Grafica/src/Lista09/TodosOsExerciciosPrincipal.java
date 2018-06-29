@@ -12,7 +12,7 @@ public class TodosOsExerciciosPrincipal {
         EventQueue.invokeLater(new Runnable() {
         @Override
         public void run() {
-        new Ex02L09();
+        new TodosOsExercicios();
             }
         });
     }
