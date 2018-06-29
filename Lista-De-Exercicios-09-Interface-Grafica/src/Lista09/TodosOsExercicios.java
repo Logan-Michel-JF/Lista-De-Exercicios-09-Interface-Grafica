@@ -117,6 +117,13 @@ public class TodosOsExercicios {
     }
 
     private void acaoJButton02() {
+        jButton02.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Ex03L09();
+            }
+        });
     }
 
     private void acaoJButton03() {
